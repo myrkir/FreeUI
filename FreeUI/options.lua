@@ -333,13 +333,23 @@ C["buffTracker"] = {
 		{spellIds = {[5171]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 1},
 	},
 	["WARRIOR"] = {
-		-- Last Stand, Shield Wall, Recklessness
-		{spellIds = {[12975]=true, [871]=true, [1719]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 2},
-		-- Shield Block
-		{spellIds = {[2565]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 3},
+		-- Last Stand, Shield Wall, Recklessness, Shield Barrier
+		{spellIds = {[12975]=true, [871]=true, [1719]=true, [112048]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 1},
+		-- Shield Block, Shield Charge
+		{spellIds = {[132404]=true, [169667]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 3},
 		-- Enrage
-		{spellIds = {[12880]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 3, spec = 1},
-	}
+		{spellIds = {[12880]=true, [13046]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 3, spec = 2},
+		-- Unyielding Strikes, Sword and Board
+		{spellIds = {[169686]=true, [50227]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 2},
+	},
+	["HUNTER"] = {
+		-- Mend Pet
+		{spellIds = {[136]=true}, unitId = "pet", isMine = 1, filter = "HELPFUL", slot = 1},
+	},
+	["DRUID"] = {
+		-- Savage Roar, Mastery: Harmony
+		{spellIds = {[52610]=true, [100977]=true}, unitId = "player", isMine = 1, filter = "HELPFUL", slot = 1},
+	},
 }
 
 -- [[ Filters ]]
@@ -470,6 +480,13 @@ C["hideDebuffs"] = {
 	[71041] = true, -- Dungeon Deserter
 	[26218] = true, -- Mistletoe
 	[117870] = true, -- Touch of the Titans
+	[173658] = true, -- Delvar Ironfist defeated
+	[173659] = true, -- Talonpriest Ishaal defeated
+	[173661] = true, -- Vivianne defeated
+	[173679] = true, -- Leorajh defeated
+	[173649] = true, -- Tormmok defeated
+	[173660] = true, -- Aeda Brightdawn defeated
+	[173657] = true, -- Defender Illona defeated	
 }
 
 if select(2, UnitClass("player")) == "PRIEST" then C.hideDebuffs[6788] = false end
@@ -480,6 +497,9 @@ C["myBuffs"] = {
 	[774] = true, -- Rejuvenation
 	[8936] = true, -- Regrowth
 	[33763] = true, -- Lifebloom
+	[155777] = true, -- Rejuvenation (Germination)
+	[162359] = true, -- Genesis
+	[48438] = true, -- Wild Growth
 
 	[33110] = true, -- Prayer of Mending
 	[33076] = true, -- Prayer of Mending
